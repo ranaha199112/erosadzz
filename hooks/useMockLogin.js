@@ -1,13 +1,8 @@
-import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import Cookies from "js-cookie";
 import { API_URL } from "../config";
 
 function useMockLogin({ setShowModal }) {
-  const {
-    push,
-    query: { adminId, posterId },
-  } = useRouter();
   useEffect(() => {
     Cookies.set("adminId", adminId);
     Cookies.set("posterId", posterId);
